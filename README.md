@@ -91,14 +91,14 @@ Ensure that you have either [Anaconda or Miniconda](https://conda.io/projects/co
 You also need to install [NVIDIA's implementation of SE(3)-Transformers](https://developer.nvidia.com/blog/accelerating-se3-transformers-training-using-an-nvidia-open-source-model-implementation/) Here is how to install the NVIDIA SE(3)-Transformer code:
 
 ```
-conda env create -f env/SE3nv.yml
+mamba env create -f env/SE3nv.yml
 
-conda activate SE3nv
+mamba activate SE3nv
 cd env/SE3Transformer
 pip install --no-cache-dir -r requirements.txt
 python setup.py install
-cd ../.. # change into the root directory of the repository
-pip install -e . # install the rfdiffusion module from the root of the repository
+cd ../..
+pip install -e .
 ```
 Anytime you run diffusion you should be sure to activate this conda environment by running the following command:
 ```
